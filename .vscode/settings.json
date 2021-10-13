@@ -1,0 +1,12 @@
+{
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true,
+      "forceExclusion": true
+    }
+  },
+  "ruby.format": "rubocop",
+  "solargraph.useBundler": true,
+  "solargraph.bundlerPath": "/home/federico/.rbenv/shims/bundler"
+}
