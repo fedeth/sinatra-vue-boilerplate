@@ -1,11 +1,19 @@
 const path = require('path');
-const {merge} = require('webpack-merge');
+const {mergeWithRules} = require('webpack-merge');
 const base = require('./webpack.base.config');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-module.exports = merge(base, {
+
+module.exports = mergeWithRules({
+  module: {
+    rules: {
+      test: 'match',
+      use: 'replace',
+    },
+  },
+})(base, {
   mode: 'production',
   devtool: false,
 
