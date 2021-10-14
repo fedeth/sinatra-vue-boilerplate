@@ -5,7 +5,7 @@ const {VueLoaderPlugin} = require('vue-loader');
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, '../client/src/index.js'),
+    main: path.resolve(__dirname, '../client/index.js'),
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -55,7 +55,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: 'webpack Boilerplate',
-      template: path.resolve(__dirname, '../client/src/template.html'),
+      template: path.resolve(__dirname, '../client/template.html'),
       filename: 'index.html', // output file
     }),
   ],
